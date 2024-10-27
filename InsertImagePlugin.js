@@ -1,6 +1,9 @@
 /***
+|Description|Insert images from clipboard as base64|
+|Source     |https://github.com/YakovL/TiddlyWiki_InsertImagePlugin/blob/master/InsertImagePlugin.js|
 |Version    |0.2.4|
 |Author     |Yakov Litvin|
+|License    |[[MIT|https://github.com/YakovL/TiddlyWiki_YL_ExtensionsCollection/blob/master/Common%20License%20(MIT)]]|
 ***/
 //{{{
 config.macros.attachImage = {
