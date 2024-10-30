@@ -4,6 +4,8 @@
 |Version    |0.2.4|
 |Author     |Yakov Litvin|
 |License    |[[MIT|https://github.com/YakovL/TiddlyWiki_YL_ExtensionsCollection/blob/master/Common%20License%20(MIT)]]|
+!!!Usage
+Just copy an image and paste it inside a tiddler in edit mode
 ***/
 //{{{
 config.macros.attachImage = {
