@@ -1,7 +1,7 @@
 /***
 |Description|Insert images from clipboard as base64|
 |Source     |https://github.com/YakovL/TiddlyWiki_InsertImagePlugin/blob/master/InsertImagePlugin.js|
-|Version    |0.2.4|
+|Version    |0.2.5|
 |Author     |Yakov Litvin|
 |License    |[[MIT|https://github.com/YakovL/TiddlyWiki_YL_ExtensionsCollection/blob/master/Common%20License%20(MIT)]]|
 !!!Usage
@@ -24,7 +24,7 @@ config.macros.attachImage = {
 		if(!imgItem) return
 
 		const file = imgItem.getAsFile()
-		const base64Data = await this.fileToBase64(file)
+		const base64Data = await config.macros.attachImage.fileToBase64(file)
 		const imgMarkup = `[img[${base64Data}]]`
 		config.macros.attachImage.insertMarkupIntoEditor(imgMarkup, event.target)
 	},
