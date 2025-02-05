@@ -24,4 +24,13 @@ var applyVariablesCss = function() {
 
 	setStylesheet(css, "CssOptions")
 }
+
+config.macros.option.types[cssOptionPrefix] = config.macros.option.types.txt
+var orig_onChange = config.macros.option.types[cssOptionPrefix].onChange
+config.macros.option.types[cssOptionPrefix].onChange = function() {
+	applyVariablesCss()
+	return orig_onChange.apply(this, arguments)
+}
+config.optionHandlers[cssOptionPrefix] = config.optionHandlers.txt
+loadOptions() // only needed in a plugin since loadOptions() is called before loadPlugins()
 //}}}
